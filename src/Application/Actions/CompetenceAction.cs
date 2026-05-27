@@ -1,6 +1,6 @@
 using Domain.Entities;
 
-namespace Application.Actions;
+namespace CombatTourParTour.Application.Actions;
 
 public class CompetenceAction : ICombatAction
 {

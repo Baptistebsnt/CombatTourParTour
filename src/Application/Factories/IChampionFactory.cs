@@ -1,6 +1,6 @@
 using Domain.Entities;
 
-namespace Application.Factories;
+namespace CombatTourParTour.Application.Factories;
 
 public interface IChampionFactory
 {

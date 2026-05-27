@@ -1,8 +1,8 @@
-namespace Application.Actions;
+namespace CombatTourParTour.Application.Actions;
 
 using Domain.Entities;
 
-public class AttaqueBasicAction : ICombatAction
+public class AttaqueDeBaseAction : ICombatAction
 {
     public string Nom => "Attaque de base";
 

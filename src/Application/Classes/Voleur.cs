@@ -1,4 +1,4 @@
-namespace Application.Classes;
+namespace CombatTourParTour.Application.Classes;
 
 using Domain.Abstractions;
 

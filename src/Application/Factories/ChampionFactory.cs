@@ -1,8 +1,8 @@
-using Application.Classes;
+using CombatTourParTour.Application.Classes;
 using Domain.Abstractions;
 using Domain.Entities;
 
-namespace Application.Factories;
+namespace CombatTourParTour.Application.Factories;
 
 public class ChampionFactory : IChampionFactory
 {
