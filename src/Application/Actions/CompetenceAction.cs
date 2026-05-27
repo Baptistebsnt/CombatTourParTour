@@ -1,4 +1,4 @@
-using Domain.Entities;
+using CombatTourParTour.Domain.Entities;
 
 namespace CombatTourParTour.Application.Actions;
 

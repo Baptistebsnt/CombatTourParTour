@@ -1,6 +1,6 @@
 using CombatTourParTour.Application.Classes;
-using Domain.Abstractions;
-using Domain.Entities;
+using CombatTourParTour.Domain.Abstractions;
+using CombatTourParTour.Domain.Entities;
 
 namespace CombatTourParTour.Application.Factories;
 

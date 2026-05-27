@@ -1,6 +1,6 @@
 namespace CombatTourParTour.Application.Classes;
 
-using Domain.Abstractions;
+using CombatTourParTour.Domain.Abstractions;
 
 public class Voleur : IClasseChampions
 {

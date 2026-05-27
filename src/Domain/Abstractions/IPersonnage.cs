@@ -1,4 +1,4 @@
-namespace Domain.Abstractions;
+namespace CombatTourParTour.Domain.Abstractions;
 
 public interface IPersonnage
 {

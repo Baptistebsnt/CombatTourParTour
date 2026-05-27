@@ -1,6 +1,6 @@
 namespace CombatTourParTour.Application.Actions;
 
-using Domain.Entities;
+using CombatTourParTour.Domain.Entities;
 
 public class AttaqueDeBaseAction : ICombatAction
 {

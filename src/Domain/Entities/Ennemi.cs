@@ -1,6 +1,6 @@
-namespace Domain.Entities;
+namespace CombatTourParTour.Domain.Entities;
 
-using Domain.Abstractions;
+using CombatTourParTour.Domain.Abstractions;
 
 public class Ennemi(string nom, int pvMax, int attaque, int armure) : IPersonnage
 {
