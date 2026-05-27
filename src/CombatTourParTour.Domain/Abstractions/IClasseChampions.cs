@@ -1,3 +1,5 @@
+namespace CombatTourParTour.Domain.Abstractions;
+
 public interface IClasseChampions
 {
     string Nom { get; }

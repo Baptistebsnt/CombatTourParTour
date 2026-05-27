@@ -1,4 +1,7 @@
-﻿IChampionFactory championFactory = new ChampionFactory();
+﻿using CombatTourParTour.Application.Factories;
+using CombatTourParTour.Domain.Entities;
+
+IChampionFactory championFactory = new ChampionFactory();
 
 Console.WriteLine("Nom de votre champion : ");
 string nom = Console.ReadLine();
