@@ -1,3 +1,7 @@
+namespace CombatTourParTour.Application.Classes;
+
+using CombatTourParTour.Domain.Abstractions;
+
 public class Guerrier : IClasseChampions
 {
     public string Nom => "Guerrier";

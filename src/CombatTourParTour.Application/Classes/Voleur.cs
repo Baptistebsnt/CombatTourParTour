@@ -1,3 +1,7 @@
+namespace CombatTourParTour.Application.Classes;
+
+using CombatTourParTour.Domain.Abstractions;
+
 public class Voleur : IClasseChampions
 {
     public string Nom => "Voleur";
