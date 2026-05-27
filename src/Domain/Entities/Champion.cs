@@ -1,6 +1,6 @@
-namespace CombatTourParTour.Domain.Entities;
+namespace Domain.Entities;
 
-using CombatTourParTour.Domain.Abstractions;
+using Domain.Abstractions;
 
 public class Champion : IPersonnage
 {

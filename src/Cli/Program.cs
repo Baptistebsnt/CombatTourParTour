@@ -1,5 +1,5 @@
-﻿using CombatTourParTour.Application.Factories;
-using CombatTourParTour.Domain.Entities;
+using Application.Factories;
+using Application.Entities;
 
 IChampionFactory championFactory = new ChampionFactory();
 

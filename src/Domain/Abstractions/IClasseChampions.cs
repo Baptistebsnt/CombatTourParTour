@@ -1,4 +1,4 @@
-namespace CombatTourParTour.Domain.Abstractions;
+namespace Domain.Abstractions;
 
 public interface IClasseChampions
 {

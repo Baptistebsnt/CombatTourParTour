@@ -1,6 +1,6 @@
-namespace CombatTourParTour.Domain.Entities;
+namespace Domain.Entities;
 
-using CombatTourParTour.Domain.Abstractions;
+using Domain.Abstractions;
 
 public class Ennemi : IPersonnage
 {
@@ -21,5 +21,5 @@ public class Ennemi : IPersonnage
         Armure = armure;
     }
 
-    public void SubirDegats(int degats) => PvActuels -= Math.Max(0, PvActuels - degats);
+    public void SubirDegats(int degats) => PvActuels = Math.Max(0, PvActuels - degats);
 }

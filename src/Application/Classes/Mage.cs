@@ -1,6 +1,6 @@
-namespace CombatTourParTour.Application.Classes;
+namespace Application.Classes;
 
-using CombatTourParTour.Domain.Abstractions;
+using Domain.Abstractions;
 
 public class Mage : IClasseChampions
 {
