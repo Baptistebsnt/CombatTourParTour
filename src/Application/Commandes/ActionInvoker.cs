@@ -10,7 +10,7 @@ public class ActionInvoker
         _commandes[touche] = commande;
 
     public bool PeutExecuter(int touche, Champion champion) =>
-        _commandes.TryGetValue(touche, out var cmd) && cmd.PeutExecuter(champion);
+        _commandes.TryGetValue(touche, out var commande) && commande.PeutExecuter(champion);
 
     public void Executer(int touche, Champion champion, Ennemi cible)
     {
