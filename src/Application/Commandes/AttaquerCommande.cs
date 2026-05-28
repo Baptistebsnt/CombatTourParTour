@@ -3,7 +3,7 @@ namespace CombatTourParTour.Application.Commandes;
 using CombatTourParTour.Domain.Entities;
 using CombatTourParTour.Application.Actions;
 
-public class AttaquerCommand(AttaqueDeBaseAction action) : ICommande
+public class AttaquerCommande(AttaqueDeBaseAction action) : ICommande
 {
     public string Nom => action.Nom;
 

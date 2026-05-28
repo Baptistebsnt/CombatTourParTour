@@ -7,8 +7,8 @@ public class Champion : IPersonnage
     public string Nom { get; set; }
     public IClasseChampions Classe { get; set; }
     public int PvMax { get; }
-    public int PvActuels { get; set; }
-    public int CooldownRestant { get; set; }
+    public int PvActuels { get; private set; }
+    public int CooldownRestant { get; private set; }
     public bool EstVivant => PvActuels > 0;
 
     public Champion(string nom, IClasseChampions classe)
