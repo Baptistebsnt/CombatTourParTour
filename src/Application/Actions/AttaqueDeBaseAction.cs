@@ -1,8 +1,9 @@
 namespace CombatTourParTour.Application.Actions;
 
+using CombatTourParTour.Application.Events;
 using CombatTourParTour.Domain.Entities;
 
-public class AttaqueDeBaseAction : ICombatAction
+public class AttaqueDeBaseAction(CombatPublie combatPublie) : ICombatAction
 {
     public string Nom => "Attaque de base";
 
@@ -12,6 +13,18 @@ public class AttaqueDeBaseAction : ICombatAction
     {
         int degats = Math.Max(1, champion.Classe.AttaqueDeBase - cible.Armure);
         cible.SubirDegats(degats);
-        return $"{champion.Nom} attaque {cible.Nom} et inflige {degats} dégâts.";
+
+        combatPublie.Publier(new CombatEvenement(
+            TypeEvenement.DegatsInfliges,
+            $"{champion.Nom} attaque {cible.Nom} et inflige {degats} dégâts."
+        ));
+
+        if (!cible.EstVivant)
+            combatPublie.Publier(new CombatEvenement(
+                TypeEvenement.PersonnageVaincu,
+                $"{cible.Nom} est vaincu !"
+            ));
+
+        return string.Empty;
     }
 }

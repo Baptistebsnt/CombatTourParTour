@@ -1,16 +1,17 @@
 namespace CombatTourParTour.Application.Actions;
 
 using CombatTourParTour.Domain.Entities;
+using CombatTourParTour.Application.Events;
 
-public class SoinAction : ICombatAction
+public class SoinAction(CombatPublie combatPublie) : ICombatAction
 {
     private const int SoinParUtilisation = 25;
     private const int UtilisationMax = 2;
 
-    public string Nom => "Se soigner";
-
     private int _utilisationsRestantes = UtilisationMax;
-    public int UtilisationRestantes => _utilisationsRestantes;
+
+    public string Nom => "Se soigner";
+    public int UtilisationsRestantes => _utilisationsRestantes;
 
     public bool PeutRealiser(Champion champion) => _utilisationsRestantes > 0;
 
@@ -18,6 +19,12 @@ public class SoinAction : ICombatAction
     {
         champion.SeSoignerDe(SoinParUtilisation);
         _utilisationsRestantes--;
-        return $"{champion.Nom} se soigne de {SoinParUtilisation} PV. ({UtilisationRestantes} soin(s) restant(s))";
+
+        combatPublie.Publier(new CombatEvenement(
+            TypeEvenement.PersonnageSoigne,
+            $"{champion.Nom} se soigne de {SoinParUtilisation} PV. ({_utilisationsRestantes} soin(s) restant(s))"
+        ));
+
+        return string.Empty;
     }
 }
