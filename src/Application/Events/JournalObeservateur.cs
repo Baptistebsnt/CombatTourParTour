@@ -12,6 +12,6 @@ public class JournalObservateur : ICombatOberservateur
         _historique.Add($"[{evenement.Type}] {evenement.Message}");
     }
 
-    public IEnumerable<string> ObtenirDernieresEntrees() =>
+    public IEnumerable<string> ObtenirDernieresEvenements() =>
     _historique.TakeLast(NombresEntreeAfficher);
 }
